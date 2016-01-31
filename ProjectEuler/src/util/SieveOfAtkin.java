@@ -16,6 +16,7 @@ public class SieveOfAtkin {
 	private static int limitSqrt = (int) Math.sqrt((double) limit);
 	
 	private static final String STANDARD = "UTF-8";
+	private static final String INDEXEDFILENAME = "src/util/AtkinPrimesIndexed.txt";
 	private static final String FILENAME = "src/util/AtkinPrimes.txt";
 	
 	public static void main(String[] args) {
@@ -95,8 +96,10 @@ public class SieveOfAtkin {
 		
 		// Write results to FILENAME
 		PrintWriter writer = null;
+		PrintWriter indexedWriter = null;
 		try {
-			writer = new PrintWriter(FILENAME ,STANDARD);
+			writer = new PrintWriter(FILENAME, STANDARD);
+			indexedWriter = new PrintWriter(INDEXEDFILENAME, STANDARD);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
@@ -105,7 +108,8 @@ public class SieveOfAtkin {
 		int index = 1;
 		for (int i = 0; i < sieve.length; i++)	{
 			if (sieve[i])	{
-				writer.println(index + "\t" + i);
+				writer.println(i);
+				indexedWriter.println(index + "\t" + i);
 				index++;
 			}
 		}
