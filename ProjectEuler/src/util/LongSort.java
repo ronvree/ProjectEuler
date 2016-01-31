@@ -3,7 +3,7 @@ package util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sort {
+public class LongSort {
 	
 	public static List<Long> mergeSort(List<Long> list)	{
 		if (list.size() <= 1)	{

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import util.Sort;
+import util.LongSort;
 
 /*
  * The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
@@ -27,7 +27,7 @@ public class LargestProductInASeries {
 			}
 			indexedProducts.put(i, product);
 		}
-		List<Long> products = Sort.mergeSort(new ArrayList<Long>(indexedProducts.values()));
+		List<Long> products = LongSort.mergeSort(new ArrayList<Long>(indexedProducts.values()));
 		System.out.println(products.get(products.size() - 1));
 	}
 
