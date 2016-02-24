@@ -58,7 +58,7 @@ public class StringSort {
 				return false;
 			}
 		}
-		return false; 
+		return a.length() > b.length(); 
 	}
 	
 	// Returns a < b
@@ -71,7 +71,7 @@ public class StringSort {
 				return true;
 			}
 		}
-		return false; 
+		return a.length() < b.length(); 
 	}
 	
 }
