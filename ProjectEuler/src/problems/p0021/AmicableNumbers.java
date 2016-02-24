@@ -1,11 +1,7 @@
 package problems.p0021;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
-import util.IntegerSort;
 
 /*
  * Let d(n) be defined as the sum of proper divisors of n (numbers less than n which divide evenly into n).
